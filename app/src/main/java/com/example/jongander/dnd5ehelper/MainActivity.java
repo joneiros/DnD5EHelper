@@ -37,12 +37,13 @@ public class MainActivity extends AppCompatActivity {
                         try
                         {
                             JSONObject jObject = new JSONObject(response);
+                            mTextView.setText(jObject.getString("_id"));
 
                         }
                         catch(JSONException ex)
                         {
                             //TODO
-                            //ddddddd
+                            //ddddddddd
                         }
 
 

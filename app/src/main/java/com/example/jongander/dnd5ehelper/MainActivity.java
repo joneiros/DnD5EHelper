@@ -22,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        final TextView mTextView = (TextView) findViewById(R.id.labelMain);
+        /*
+        //final TextView mTextView = (TextView) findViewById(R.id.labelMain);
 
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
@@ -56,5 +57,17 @@ public class MainActivity extends AppCompatActivity {
         });
 // Add the request to the RequestQueue.
         queue.add(stringRequest);
+        */
     }
+
+    private boolean Authenticate(String email, String password){
+        //TODO replace with real authentication
+        if(email.equals("123@123.com") && password.equals("12345")){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
 }

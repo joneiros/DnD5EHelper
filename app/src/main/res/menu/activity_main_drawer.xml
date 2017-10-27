@@ -1,36 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
-    </group>
-
-    <item android:title="Communicate">
+    <item android:title="Character">
         <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+            <group android:checkableBehavior="single" android:title="Character" >
+                <item
+                    android:id="@+id/nav_overview"
+                    android:icon="@drawable/ic_menu_camera"
+                    android:title="Overview" />
+                <item
+                    android:id="@+id/nav_stats"
+                    android:icon="@drawable/ic_menu_gallery"
+                    android:title="Stats" />
+                <item
+                    android:id="@+id/nav_equipment"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Equipment &#38; Items" />
+                <item
+                    android:id="@+id/nav_spells_and_abilities"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Spells &#38; Abilities" />
+                <item
+                    android:id="@+id/nav_persona"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Persona" />
+                <item
+                    android:id="@+id/nav_war_room"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="War Room" />
+            </group>
+
         </menu>
     </item>
 
+
+    <item android:title="Journal" >
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_party"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="Party Members" />
+                <item
+                    android:id="@+id/nav_quests"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Quests" />
+                <item
+                    android:id="@+id/nav_npcs"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="NPCs" />
+                <item
+                    android:id="@+id/nav_locales"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Discovered Locations" />
+                <item
+                    android:id="@+id/nav_history"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Campaign History" />
+                <item
+                    android:id="@+id/nav_gossip"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Rumors &#38; Gossip" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="5E Resources" >
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_items"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="Party Members" />
+                <item
+                    android:id="@+id/nav_spells"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Quests" />
+            </group>
+        </menu>
+    </item>
 </menu>

@@ -1,5 +1,6 @@
 package com.example.jongander.dnd5ehelper;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +15,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
-
         //TODO: Remake the D20 image so that it has the word enter on it, rather than having a text view over an image. Then reduce onClickListener s accordingly
         final TextView tv = (TextView)findViewById(R.id.tvEnter);
         tv.setOnClickListener(new View.OnClickListener() {
@@ -24,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(Authenticate(email, password)){
                     //TODO Navigate to MainActivity
                     tv.setText("Logged In!");
+                    sendMessage();
                 }else{
                     tv.setText("Login Failure!");
                 }
@@ -37,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(Authenticate(email, password)){
                     //TODO Navigate to MainActivity
                     tv.setText("Logged In!");
+                    sendMessage();
                 }else{
                     tv.setText("Login Failure!");
                 }
@@ -81,6 +83,11 @@ public class LoginActivity extends AppCompatActivity {
 // Add the request to the RequestQueue.
         queue.add(stringRequest);
         */
+    }
+
+    public void sendMessage(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     private boolean Authenticate(String email, String password){
